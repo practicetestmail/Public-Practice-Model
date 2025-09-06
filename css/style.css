@@ -1,5 +1,13 @@
+html, body {
+    height: 100%;
+}
 body {
-    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    overflow-y: auto;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    color: #22223b;
+    letter-spacing: 0.01em;
     margin: 0;
     padding: 0;
 }
@@ -18,7 +26,109 @@ nav ul li a {
     color: #fff;
     padding: 15px 20px;
     text-decoration: none;
+    font-size: 1.08em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 nav ul li a:hover {
     background: #444;
+}
+main {
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2.4em;
+    letter-spacing: 2px;
+    color: #3b82f6;
+    font-weight: 700;
+    animation: fadeInDown 1s;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #6366f1;
+    font-size: 1.6em;
+    font-weight: 600;
+    animation: fadeIn 1.2s;
+}
+#our-service {
+    margin: 40px auto;
+    max-width: 900px;
+}
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.service-item {
+    background: #fff;
+    border: 1px solid #e0e7ff;
+    border-radius: 14px;
+    padding: 32px 22px 24px 22px;
+    width: 240px;
+    text-align: center;
+    font-size: 1.13em;
+    box-shadow: 0 2px 8px rgba(99,102,241,0.07);
+    transition: box-shadow 0.3s, transform 0.3s;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s forwards;
+    position: relative;
+}
+.service-item i {
+    font-size: 2.3em;
+    margin-bottom: 12px;
+    color: #6366f1;
+    display: block;
+    transition: color 0.3s, transform 0.3s;
+}
+.service-item:hover {
+    box-shadow: 0 8px 32px rgba(99,102,241,0.18);
+    transform: scale(1.07) translateY(-5px);
+    border-color: #6366f1;
+}
+.service-item:hover i {
+    color: #3b82f6;
+    transform: scale(1.15);
+}
+.service-item p {
+    margin-top: 10px;
+    font-size: 0.98em;
+    color: #4b5563;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+.service-item::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #6366f1 0%, #3b82f6 100%);
+    margin: 18px auto 0 auto;
+    border-radius: 2px;
+    opacity: 0.12;
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Scroll animation: fade in when visible */
+.service-item.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    animation: none !important;
 }
