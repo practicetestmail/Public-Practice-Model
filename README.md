@@ -1,6 +1,6 @@
-# Public-Practice-Model
+# Public-Practice-Model — Noyon Edition
 Public-Practice-Model by Noyon Edition offers a practical framework for designers, strategists, and entrepreneurs. It includes modular UI/UX assets, branding templates, and Git workflows to build premium, public-facing platforms with clarity, consistency, and creative impact.
-Public-Practice-Model — Noyon Edition
+
 Public-Practice-Model is a modular framework by Noyon Edition, designed for creators, strategists, and entrepreneurs who build public-facing digital platforms with clarity and creative precision.
 
 This repository offers:
